@@ -1,5 +1,4 @@
 import pygame
-import Pygame_theColors
 import random 
 import time
 
@@ -154,16 +153,7 @@ while True:
             recty2=200
             velx1=-1
             vely1=1
-        
-           # time.sleep(2)
-    ##    if ballx1==bally1==300 and rectx1==10 and recty1==200 and rectx2==570 and recty2==200:
-    ##        time.sleep(2)
-      #  if reds==5:
-     #       gameOverRed=True
-      #  elif greens==5:
-       #     gameOverGreen=True
-            
-            
+         
         pygame.draw.rect(gameDisplay, white, (0,600,600,30))    
         text('PONG', 280,605, blue, 15)
         textAriel(str(reds), 10,610, red, 20)
@@ -173,9 +163,3 @@ while True:
         pygame.draw.circle(gameDisplay, blue, (ballx1,bally1), 20)
         pygame.draw.rect(gameDisplay, red, (rectx1,recty1,20,200))
         pygame.draw.rect(gameDisplay, green, (rectx2,recty2,20,200))
-        
-  #  if gameOverRed==True:
-   #     textAriel('Red Wins', 230,300, red, 50)
-        
-            
-        
