@@ -4,10 +4,9 @@ import time
 
 pygame.init()
 
-gameDisplay=pygame.display.set_mode((600,630)) #() for tuple
+gameDisplay=pygame.display.set_mode((600,630)) 
 
 pygame.display.set_caption("Pong")
-#all above is required
 
 white=(255,255,255)#r,g,b
 black=(0,0,0)
@@ -101,7 +100,7 @@ while True:
 
     if gameStart==False:
         textAriel('Press Space to Begin', 135,300, white, 50)
-        textAriel('Anshul Games Inc 2019', 230,615,white,20)
+        textAriel('Anshul Games Inc 2017', 230,615,white,20)
         if spacebutton==True:
             gameStart=True
     elif gameStart==True:
