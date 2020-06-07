@@ -41,8 +41,6 @@ greens=0
 spacebutton=False
 
 gameStart=False
-##gameOverRed=False
-##gameOverGreen=False
 def text(msg,x,y,color=white, size=10):
     font=pygame.font.SysFont('Comic Sans MS', size)
     m=font.render(msg, True, color)
@@ -61,14 +59,14 @@ clock=pygame.time.Clock()
 
 while True:
 
-    pygame.display.update()#under while loop
-    gameDisplay.fill(black) #under while loop
+    pygame.display.update()
+    gameDisplay.fill(black)
 
-    for event in pygame.event.get():#loop through events
+    for event in pygame.event.get():
 
-        if event.type==pygame.QUIT: #event are caps
-            pygame.quit()#X out of pygame
-            quit()#exit()#quit out of shell
+        if event.type==pygame.QUIT: 
+            pygame.quit()
+            quit()
 
         if event.type==pygame.KEYDOWN:
             if event.key==pygame.K_w:
@@ -105,9 +103,6 @@ while True:
             gameStart=True
     elif gameStart==True:
         
-    #while gameStart==True and gameOverRed==False and gameOverGreen==False:
-
-        
         if redup==True and recty1!=0:
             recty1-=1
         if reddown==True and recty1!=400:
@@ -119,10 +114,6 @@ while True:
         if gdown==True and recty2!=400:
             recty2+=1
 
-       # if ballx1+20>=rectx2 and ballx1+20<=rectx2+200 and bally1>=recty2 and :
-        #    velx1=-1*velx1
-    ##    elif ballx1-20==rectx1+20 and bally1>=recty1 and bally1<=recty1+200:
-    ##        velx1=-1*velx1
         ballx1+=velx1
         bally1+=vely1
         if (ballx1+20==rectx2 and bally1>=recty2 and bally1<=recty2+200) or (ballx1-20==rectx1+20 and bally1>=recty1 and bally1<=recty1+200):
@@ -140,7 +131,7 @@ while True:
             recty2=200
             velx1=1
             vely1=1
-          #  time.sleep(2)
+        
         elif ballx1==-20:
             greens+=1
             print(greens)
